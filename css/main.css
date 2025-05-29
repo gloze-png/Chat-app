@@ -1,0 +1,92 @@
+:root{
+  --blue:#3498db;
+  --dark-blue:#2980b9;
+  --red:#e74c3c;
+  --dark-red:#c0392b;
+  --light-bg:#eee;
+  --white:#fff;
+  --box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+*{
+  margin:0; 
+  padding:0;
+  box-sizing:border-box;
+  outline:none;
+  border:none;
+  text-decoration:none;
+  font-family:'poppins', sans-serif;
+}
+*::-webkit-scrollbar{
+  width:10px;
+}
+
+*::-webkit-scrollbar-track{
+  background: var(--blue);
+}
+.btn,
+.delete-btn{
+  width:100%;
+  border-radius:5px;
+  padding:10px 30px;
+  color:var(--white);
+  background: var(--blue);
+  display:block;
+  text-align: center;
+  cursor:pointer;
+  font-size:20px;
+  margin-top:10px;
+}
+.form-container{
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+}
+.form-container form{
+  padding:20px;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  text-align:center;
+  width:500px;
+  border-radius:5px;
+
+}
+
+.form-container form h1{
+  margin-bottom: 10px;
+  font-size:30px;
+  color:var(--blue);
+  text-transform:uppercase;
+}
+.alert{
+  margin:10px 0;
+  width:100%;
+  border-radius:5px;
+  padding:10px;
+  text-align:center;
+  background: var(--red);
+  font-size:20px;
+  color:var(--white);
+}
+
+.form-container form .box{
+  width:100%;
+  border-radius:5px;
+  padding:12px 14px;
+  color:var(--blue);
+  font-size:18px;
+  margin:10px 0;
+  background: var(--light-bg);
+}
+.form-container form p{
+  margin-top:15px;
+  font-size:20px;
+  color:var(--blue);
+}
+.form-container form p a{
+  color:var(--red);
+}
+.form-container form p a:hover{
+  text-decoration:underline;
+}
