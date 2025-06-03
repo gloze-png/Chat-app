@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Account</title>
-  <link rel="stylesheet" href="/css/main.css">
+  <title>Welcome Back</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="form-container">
     <form action="" method="post" enctype="multipart/form-data">
-      <h1>Create Account</h1>
+      <h1>Welcome Back</h1>
       <div class="alert">Please Try again</div>
-      <input type="text" name="name" placeholder="Enter username" class="box" required>
       <input type="email" name="email" placeholder="Enter mail" class="box" required>
       <input type="password" name="password" placeholder="Enter password" class="box" required>
-      <input type="password" name="confirmpassword" placeholder="Confirm password" class="box" required>
-      <input type="file" name="image" class="box" accept="image/*">
-        <input type="submit" name="submit" class="btn" value="chat now">
-        <p>Already have an account?<a href="login.html">Login Now</a></p>
+       <input type="submit" name="submit" class="btn" value="chat now">
+        <p>Don't have an account yet?<a href="index.html">Create an account</a></p>
     </form>
 
   </div>

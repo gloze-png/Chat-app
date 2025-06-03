@@ -22,9 +22,29 @@
           <img src="uploaded_img/default-avatar.png" alt="">
           <span>no message are available. once you send message will appear here</span>
         </div> -->
-        <div class="chat_outgoing">
+        <div class="chat outgoing">
           <div class="details">
             <p>hi</p>
+            <!-- <p><img src="uploaded_img/default-avatar.png"></p> -->
+          </div>
+        </div>
+         <div class="chat incoming">
+          <img src="uploaded_img/default-avatar.png">
+          <div class="details">
+            <p>hi</p>
+            <!-- <p><img src="uploaded_img/default-avatar.png"></p> -->
+          </div>
+        </div>
+         <div class="chat incoming">
+          <div class="details">
+            <!-- <p>hi</p> -->
+            <p><img src="uploaded_img/default-avatar.png"></p>
+          </div>
+        </div>
+        <div class="chat outgoing">
+          <div class="details">
+            <!-- <p>hi</p> -->
+            <p><img src="uploaded_img/default-avatar.png"></p>
           </div>
         </div>
       </div>

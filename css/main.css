@@ -228,7 +228,8 @@ background: #ccc;
 
 /* THE UPDATE PROFILE BEGINS */
 .update-profile{
-  min-height: 70vh;
+  min-height:70vh;
+  height: 100vh;
   display:flex;
   align-items:center;
   justify-content: center;
@@ -336,18 +337,56 @@ background: #ccc;
   margin: 15px 0;
   border-radius: 16px;
   box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-              0  32px 64px -48px rgba(0,0,0,0.5);
- width: 100%;
- background: var(--white);
+  0  32px 64px -48px rgba(0,0,0,0.5);
+  /* width: 100%; */
+  background: var(--white);
 }
 .chat-box .chat p{
   word-wrap:break-word;
-  padding: 18px 16px;
-  box-shadow: 0 0 32px 32px rgba(0 0 0/8%),
-              0rem 16px 16px -16px rgba(0 0 0/5%);
+  padding: 8px 16px;
+  box-shadow: 0 0 32px rgba(0 0 0/8%),
+              0rem 16px 16px -16px rgb(0 0 0/ 10%);
 }
 .chat-box .outgoing{
   display:flex;
+}
+.chat-box .outgoing .details{
+  margin-left:auto;
+  max-width: calc(100%  - 130px);
+}
+.outgoing .details p{
+  background: var(--blue);
+  color:var(--white);
+  border-radius: 18px 18px 0 18px;
+}
+.outgoing .details img{
+  height: 150px;
+  width: 100px;
+}
+.incoming{
+  display: flex;
+  align-items: flex-end;
+}
+.incoming img{
+  height: 40px;
+  width:40px;
+  object-fit:cover;
+  border-radius: 50%;
+}
+.incoming .details{
+  margin-right:auto;
+  margin-left:10px;
+  max-width:calc(100% - 130px);
+}
+.incoming .details p{
+  background: var(--dark-blue);
+  color:var(--white);
+  border-radius:18px 18px 18px 0;
+}
+.incoming .details img{
+  height: 150px;
+  width: 100px;
+  border-radius: 0;
 }
 .typing-area{
   padding:18px 30px;
@@ -387,9 +426,51 @@ background: #ccc;
 .typing-area .send_btn.active{
   opacity: 1;
   pointer-events: auto;
-
 }
 .typing-area .send_btn img{
   height: 25px;
   width: 25px;
 }
+ @media (max-width:650px){
+  .container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;left: 0;right:0;
+    padding:0;display:block;
+    overflow-y:hidden;
+  }
+  .container .users{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .container .chat-box{
+    position: absolute;
+    left:0;right:0;
+    min-height: 100%;
+    max-width: 100%;
+  }
+  .typing-area{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--white);
+  }
+  .update-profile{
+    min-height:50vh;
+    padding: 0;
+    height: 100%;
+  }
+  .update-profile form .flex{
+    flex-wrap:wrap;
+    gap:0;
+  }
+  .update-profile form .flex .inputBox{
+    width: 100%;
+  }
+  .form-container form{
+    box-shadow: none;
+    border: none;
+  }
+} 
