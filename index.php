@@ -13,14 +13,14 @@ if(isset($_POST['submit'])){ // if the form is submitted or clicked
 if(filter_var($email, FILTER_VALIDATE_EMAIL )){ // checking if the email is correct
   $image = $_FILES['image']['name']; // user image name
   $image_size = $_FILES['image']['size']; // user image size
-  $image_tmp_name =$_FILES['image']['size'];
+  $image_tmp_name =$_FILES['image']['tmp_name'];
   $image_rename = $image;
   $image_folder = 'uploaded_img/'.$image_rename; // image folder
   $status = 'Active Now'; // user status
 
   $select = mysqli_query($conn, "SELECT* FROM user_form WHERE email='$email'
                            AND password = '$password' "); //checking if the email is already in use
- if(mysqli_num_rows($select) >0 ) {
+ if(mysqli_num_rows($select) > 0 ) {
    $alert[] = "user already exist";
  } else {
   if($password != $cpassword){
@@ -39,14 +39,12 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL )){ // checking if the email is corr
 }
  }                    
 
-
 }else{
   $alert[] = "$email is not correct";
 }
 }
 ?>
-
-
+<DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,10 +68,8 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL )){ // checking if the email is corr
       <input type="password" name="cpassword" placeholder="Confirm password" class="box" required>
       <input type="file" name="image" class="box" accept="image/*">
         <input type="submit" name="submit" class="btn" value="chat now">
-        <p>Already have an account?<a href="login.html">Login Now</a></p>
+        <p>Already have an account?<a href="login.php">Login Now</a></p>
     </form>
-
-  </div>
-  
+  </div> 
 </body>
 </html>

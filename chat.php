@@ -56,7 +56,6 @@
         <button class="send_btn" name="send_btn"><img src="images/send.svg" alt=""></button>
       </form>
     </section>
-  </div>
-  
+  </div> 
 </body>
 </html>
