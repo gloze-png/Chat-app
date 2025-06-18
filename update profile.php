@@ -80,7 +80,8 @@ if (isset($_POST['update_profile'])){
 <body>
   <div class="update-profile">
     <form action="" method="post" enctype="multipart/form-data">
-      <a href="update profile.php"><img src="uploaded_img/<?php print $row['img']?>" alt="avatar"></a>
+      <a href="update profile.php">
+        <img src="uploaded_img/<?php print $row['img']?>" alt="avatar"></a>
       <?php 
       if(isset($alert)){
         foreach($alert as $alert){
